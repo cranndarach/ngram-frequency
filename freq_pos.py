@@ -10,7 +10,7 @@ import csv
 def write_csv(output_path, freqs):
     with open(output_path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["word", "pos", "freq"])
-        writer.writeheader()
+        # writer.writeheader()
         for row in freqs.values():
             writer.writerow(row)
 
